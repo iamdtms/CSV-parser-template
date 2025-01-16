@@ -583,29 +583,7 @@ function convert() {
   var table = $("#tableContainer").children('table');
   $(table.find('tr')).each(function (rowIndex = 1, row) {
     $(row).find('td').each(function (cellIndex, cell) {
-      /*if (cellIndex == 4) {
-        var currentAll = $(cell).html();
-        var current1Index = currentAll.indexOf(' ');
-        var current1 = currentAll.substring(0, current1Index);
-        var current2 = $(cell).html().split(' ')[1];
-        var dr = $(cell).html().indexOf('DR.');
-
-        if (current2 != undefined) {
-          if (current1 != undefined) {
-            if (current2 == '') {
-              if (current1 != '') {
-                console.log("empty");
-                // do nothing
-              }
-            } else {
-              console.log("normal");
-              $('#cell_' + rowIndex + '_5').html(current1);
-              $('#cell_' + rowIndex + '_6').html(current2);
-            }
-          }
-        }
-        // do things
-      }*/
+        // convert steps
     });
   });
   setTimeout(function () {
