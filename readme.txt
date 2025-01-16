@@ -1,4 +1,4 @@
-CSV-parser-template és magyarKeresztnevek
+CSV-parser-template és magyar keresztnevek
 -----------------------------------------
 
 - a CSV bemenet feltöltése a "Choose file" gombra kattintással történik
