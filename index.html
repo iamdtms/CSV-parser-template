@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="iamdtms (Dohany Tamas)">
+  <title>CSV-parser-template</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <section class="loader" style="display: none">
+    <img src="assets/spin.svg" width="50" alt="loading...">
+  </section>
+  <form action="#">
+    <fielset class="input">
+      <h1>CSV-parser-template</h1>
+      <hr>
+      <label for="csvFileInput"><input type="file" id="csvFileInput" accept=".csv"></label>
+      <hr>
+    </fielset>
+    <fielset class="output">
+      <label for="csvConvert"><button id="csvConvert" onclick="convert()">Convert</button></label>
+      <hr>
+      <label for="csvExport"><button id="csvExport" onclick="downloadCSV()">Download</button></label>
+      <hr>
+    </fielset>
+  </form>
+  <footer>
+    <p><a href="https://iamdtms.hu">@iamdtms</a></p>
+  </footer>
+  <div id="tableContainer"></div>
+  <script src="assets/jquery-3.7.1.slim.min.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>

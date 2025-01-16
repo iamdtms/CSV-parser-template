@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 200;
+  background-color: #333;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+#tableContainer table {
+  margin: 1rem;
+  min-inline-size: calc(100vw - 2rem);
+}
+
+#tableContainer td {
+  font-family: monospace;
+  background-color: black;
+  padding: .5rem;
+}
+
+#tableContainer #row_1 td {
+  font-weight: 600;
+}
+
+#tableContainer td:empty {
+  border-width: 0;
+}
+
+.loader {
+  position: absolute;
+  inset: 0;
+  background-color: #333;
+  display: grid;
+  place-content: center;
+}
