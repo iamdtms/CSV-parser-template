@@ -1,0 +1,642 @@
+const magyarKeresztnevek = [
+  "Fruzsina",
+  "Ábel",
+  "Benjámin",
+  "Genovéva",
+  "Angel",
+  "Leona",
+  "Titusz",
+  "Simon",
+  "Boldizsár",
+  "Attila",
+  "Ramóna",
+  "Gyöngyvér",
+  "Marcell",
+  "Melánia",
+  "Ágota",
+  "Erno",
+  "Veronika",
+  "Bódog",
+  "Loránd",
+  "Loránt",
+  "Gusztáv",
+  "Antal",
+  "Antónia",
+  "Piroska",
+  "Sára",
+  "Márió",
+  "Sebestyén",
+  "Fábián",
+  "Ágnes",
+  "Artúr",
+  "Vince",
+  "Zelma",
+  "Rajmund",
+  "Timót",
+  "Pál",
+  "Paula",
+  "Vanda",
+  "Angelika",
+  "Karola",
+  "Károly",
+  "Adél",
+  "Gerda",
+  "Martina",
+  "Marcella",
+  "Ignác",
+  "Karolina",
+  "Aida",
+  "Balázs",
+  "Csenge",
+  "Ráhel",
+  "Ágota",
+  "Ingrid",
+  "Dóra",
+  "Dorottya",
+  "Rómeó",
+  "Tódor",
+  "Aranka",
+  "Abigél",
+  "Alex",
+  "Elvira",
+  "Bertold",
+  "Marietta",
+  "Lívia",
+  "Lídia",
+  "Linda",
+  "Ella",
+  "Bálint",
+  "Valentin",
+  "Kolos",
+  "Georgina",
+  "Julianna",
+  "Lilla",
+  "Donát",
+  "Bernadett",
+  "Zsuzsanna",
+  "Aladár",
+  "Álmos",
+  "Eleonóra",
+  "Gerzson",
+  "Alfréd",
+  "Mátyás",
+  "Géza",
+  "Edina",
+  "Bátor",
+  "Bátor",
+  "Elemér",
+  "Albin",
+  "Lujza",
+  "Kornélia",
+  "Kázmér",
+  "Adorján",
+  "Adrián",
+  "Ágnes",
+  "Inez",
+  "Leonóra",
+  "Zoltán",
+  "Fanni",
+  "Franciska",
+  "Ildikó",
+  "Szilárd",
+  "Gergely",
+  "Ajtony",
+  "Krisztián",
+  "Matild",
+  "Kristóf",
+  "Henrietta",
+  "Gertrúd",
+  "Patrik",
+  "Sándor",
+  "Ede",
+  "Bánk",
+  "József",
+  "Klaudia",
+  "Benedek",
+  "Beáta",
+  "Izolda",
+  "Lea",
+  "Emoke",
+  "Karina",
+  "Gábor",
+  "Irén",
+  "Írisz",
+  "Emánuel",
+  "Hajnalka",
+  "Gedeon",
+  "Johanna",
+  "Auguszta",
+  "Zalán",
+  "Árpád",
+  "Hugó",
+  "Áron",
+  "Buda",
+  "Richárd",
+  "Izidor",
+  "Vince",
+  "Vilmos",
+  "Bíborka",
+  "Herman",
+  "Dénes",
+  "Erhard",
+  "Zsolt",
+  "Szaniszló",
+  "Leó",
+  "Gyula",
+  "Ida",
+  "Tibor",
+  "Tas",
+  "Anasztázia",
+  "Csongor",
+  "Rudolf",
+  "Andrea",
+  "Ilma",
+  "Ilona",
+  "Emma",
+  "Tivadar",
+  "Konrád",
+  "Csilla",
+  "Noémi",
+  "Béla",
+  "György",
+  "Márk",
+  "Ervin",
+  "Zita",
+  "Valéria",
+  "Péter",
+  "Kitti",
+  "Katalin",
+  "Fülöp",
+  "Zsaklin",
+  "Zsigmond",
+  "Tímea",
+  "Irma",
+  "Flórián",
+  "Mónika",
+  "Györgyi",
+  "Frida",
+  "Ivett",
+  "Gizella",
+  "Mihály",
+  "Gergely",
+  "Ármin",
+  "Pálma",
+  "Ferenc",
+  "Pongrác",
+  "Szervác",
+  "Imola",
+  "Bonifác",
+  "Szonja",
+  "Zsófia",
+  "Mózes",
+  "Botond",
+  "Paszkál",
+  "Alexandra",
+  "Erik",
+  "Ivó",
+  "Milán",
+  "Felícia",
+  "Bernát",
+  "Konstantin",
+  "Júlia",
+  "Rita",
+  "Dezso",
+  "Eliza",
+  "Eszter",
+  "Vanessza",
+  "Orbán",
+  "Evelin",
+  "Fülöp",
+  "Hella",
+  "Emil",
+  "Csanád",
+  "Magdolna",
+  "Zsanett",
+  "Janka",
+  "Angéla",
+  "Petronella",
+  "Tünde",
+  "Anita",
+  "Kármen",
+  "Cecília",
+  "Klotild",
+  "Bulcsú",
+  "Fatima",
+  "Fatime",
+  "Cintia",
+  "Norbert",
+  "Róbert",
+  "Medárd",
+  "Félix",
+  "Gréta",
+  "Margit",
+  "Barnabás",
+  "Villo",
+  "Antal",
+  "Anett",
+  "Vazul",
+  "Vid",
+  "Jolán",
+  "Jusztin",
+  "Alida",
+  "Laura",
+  "Levente",
+  "Arnold",
+  "Gyárfás",
+  "Rafael",
+  "Leila",
+  "Alajos",
+  "Paulina",
+  "Zoltán",
+  "Iván",
+  "Vilmos",
+  "Pál",
+  "János",
+  "László",
+  "Levente",
+  "Irén",
+  "Pál",
+  "Péter",
+  "Pál",
+  "Tihamér",
+  "Annamária",
+  "Ottó",
+  "Kornél",
+  "Soma",
+  "Ulrik",
+  "Sarolta",
+  "Emese",
+  "Csaba",
+  "Apollónia",
+  "Ellák",
+  "Lukrécia",
+  "Amália",
+  "Lili",
+  "Nóra",
+  "Dalma",
+  "Izabella",
+  "Jeno",
+  "Örs",
+  "Stella",
+  "Roland",
+  "Henrik",
+  "Valter",
+  "Endre",
+  "Elek",
+  "Frigyes",
+  "Emília",
+  "Éliás",
+  "Illés",
+  "Dániel",
+  "Daniella",
+  "Magdolna",
+  "Lenke",
+  "Kincso",
+  "Kinga",
+  "Kristóf",
+  "Anna",
+  "Anikó",
+  "Liliána",
+  "Olga",
+  "Szabolcs",
+  "Márta",
+  "Flóra",
+  "Judit",
+  "Xénia",
+  "Oszkár",
+  "Boglárka",
+  "Lehel",
+  "Hermina",
+  "Dominika",
+  "Domonkos",
+  "Krisztina",
+  "Bettina",
+  "Berta",
+  "Ibolya",
+  "László",
+  "Emod",
+  "Lorinc",
+  "Tiborc",
+  "Zsuzsanna",
+  "Klára",
+  "Ipoly",
+  "Marcell",
+  "Mária",
+  "Ábrahám",
+  "Jácint",
+  "Ilona",
+  "Huba",
+  "István",
+  "Hajna",
+  "Sámuel",
+  "Mirjam",
+  "Menyhért",
+  "Bence",
+  "Bertalan",
+  "Lajos",
+  "Patrícia",
+  "Izsó",
+  "Gáspár",
+  "Ágoston",
+  "Beatrix",
+  "Erna",
+  "Rózsa",
+  "Erika",
+  "Bella",
+  "Egon",
+  "Egyed",
+  "Dorina",
+  "Rebeka",
+  "Hilda",
+  "Rozália",
+  "Lorinc",
+  "Viktor",
+  "Zakariás",
+  "Regina",
+  "Mária",
+  "Adrienn",
+  "Ádám",
+  "Hunor",
+  "Nikolett",
+  "Teodóra",
+  "Mária",
+  "Kornél",
+  "Roxána",
+  "Szeréna",
+  "Melitta",
+  "Eniko",
+  "Edit",
+  "Edith",
+  "Zsófia",
+  "Diána",
+  "Vilhelmina",
+  "Friderika",
+  "Mirella",
+  "Máté",
+  "Móric",
+  "Líviusz",
+  "Tekla",
+  "Mercédesz",
+  "Gellért",
+  "Eufrozina",
+  "Kende",
+  "Jusztina",
+  "Adalbert",
+  "Vencel",
+  "Mihály",
+  "Jeromos",
+  "Malvin",
+  "Petra",
+  "Helga",
+  "Ferenc",
+  "Aurél",
+  "Brúnó",
+  "Renáta",
+  "Amália",
+  "Koppány",
+  "Dénes",
+  "Gedeon",
+  "Brigitta",
+  "Miklós",
+  "Miksa",
+  "Ede",
+  "Kálmán",
+  "Helén",
+  "Teréz",
+  "Gál",
+  "Hedvig",
+  "Lukács",
+  "Nándor",
+  "Vendel",
+  "Orsolya",
+  "Elod",
+  "Gyöngyi",
+  "Salamon",
+  "Bianka",
+  "Blanka",
+  "Dömötör",
+  "Szabina",
+  "Szimonett",
+  "Szimonetta",
+  "Simon",
+  "Nárcisz",
+  "Alfonz",
+  "Marianna",
+  "Achilles",
+  "Gyozo",
+  "Károly",
+  "Imre",
+  "Lénárd",
+  "Rezso",
+  "Zsombor",
+  "Tivadar",
+  "Réka",
+  "Márton",
+  "Renátó",
+  "Jónás",
+  "Szilvia",
+  "Aliz",
+  "Albert",
+  "Lipót",
+  "Ödön",
+  "Gergo",
+  "Hortenzia",
+  "Jeno",
+  "Erzsébet",
+  "Jolán",
+  "Olivér",
+  "Cecília",
+  "Klementina",
+  "Emma",
+  "Katalin",
+  "Virág",
+  "Virgil",
+  "Stefánia",
+  "Taksony",
+  "Andor",
+  "András",
+  "Elza",
+  "Vivien",
+  "Melinda",
+  "Ferenc",
+  "Borbála",
+  "Barbara",
+  "Vilma",
+  "Miklós",
+  "Ambrus",
+  "Mária",
+  "Natália",
+  "Judit",
+  "Árpádina",
+  "Árpád",
+  "Gabriella",
+  "Otília",
+  "Luca",
+  "Szilárda",
+  "Valér",
+  "Etelka",
+  "Aletta",
+  "Lázár",
+  "Olimpia",
+  "Auguszta",
+  "Viola",
+  "Teofil",
+  "Zénó",
+  "Viktória",
+  "Ádám",
+  "Éva",
+  "Eugénia",
+  "István",
+  "János",
+  "Kamilla",
+  "Tamara",
+  "Tamás",
+  "Dávid",
+  "Szilveszter"
+];
+
+document.getElementById('csvFileInput').addEventListener('change', handleFile);
+var loader = document.querySelector(".loader");
+var uploadInputs = document.querySelector(".input");
+
+function downloadCSV() {
+  loader.style.cursor = "loading";
+  loader.style.display = "grid";
+  var table = document.getElementById('tableContainer').firstChild;
+  var csvString = "";
+
+  for (var i = 0; i < table.rows.length; i++) {
+    var rowData = table.rows[i].cells;
+
+    for (var j = 0; j < rowData.length; j++) {
+      csvString += rowData[j].innerText + ",";
+
+      if (j === rowData.length - 1) {
+        csvString = csvString.slice(0, -1);
+      }
+    }
+    csvString += "\n";
+  }
+
+  var blob = new Blob([csvString], { type: "text/csv;charset=utf-8" });
+  var link = document.createElement("a");
+  link.href = window.URL.createObjectURL(blob);
+  link.download = "output.csv";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  setTimeout(function () {
+    loader.style.display = "none";
+    loader.style.cursor = "pointer";
+  }, 1500);
+}
+
+function handleFile(event) {
+  const file = event.target.files[0];
+  uploadInputs.hidden = true;
+
+  if (file) {
+    $('#csvConvert').removeAttr('disabled');
+    loader.style.cursor = "loading";
+    loader.style.display = "grid";
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      const csv = e.target.result;
+      const table = convertCsvToTable(csv);
+      document.getElementById('tableContainer').innerHTML = table;
+    };
+    reader.readAsText(file);
+    setTimeout(function () {
+      loader.style.display = "none";
+      loader.style.cursor = "pointer";
+    }, 1500);
+  }
+}
+
+function convertCsvToTable(csv) {
+  const rows = csv.split('\n');
+  let tableHtml = '<table>';
+
+  rows.forEach((row, rowIndex) => {
+    const columns = row.split(',');
+    const rowId = `row_${rowIndex + 1}`;
+    tableHtml += `<tr id="${rowId}">`;
+
+    columns.forEach((column, columnIndex) => {
+      const tdId = `cell_${rowIndex + 1}_${columnIndex + 1}`;
+      tableHtml += `<td id="${tdId}">${column}</td>`;
+    });
+
+    tableHtml += '</tr>';
+  });
+
+  tableHtml += '</table>';
+  return tableHtml;
+}
+
+function format(str) {
+  return str.toLowerCase();
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function everyWordCapitalized(str) {
+  var splitStr = str.toLowerCase().split(' ');
+  for (var i = 0; i < splitStr.length; i++) {
+    splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+  }
+  return splitStr.join(' ');
+}
+
+function convert() {
+  var start = Date.now() / 1000;
+  loader.style.cursor = "loading";
+  loader.style.display = "grid";
+  $('#csvConvert').attr('disabled', '');
+  $('#csvExport').removeAttr('disabled');
+
+  var table = $("#tableContainer").children('table').children('tbody');
+  $(table.find('tr')).each(function (rowIndex, row) {
+    rowIndex++;
+    $(row).find('td').each(function (cellIndex, cell) {
+      var out = $(this).text();
+
+      var firstNameOut = out.split(' ').slice(0, -1).join(' ');
+      var lastNameOut = out.split(' ').slice(-1).join(' ');
+
+      firstNameOut = firstNameOut.toLowerCase();
+      lastNameOut = lastNameOut.toLowerCase();
+
+      var firstNameOut1 = firstNameOut.charAt(0).toUpperCase();
+      var firstNameOut2 = firstNameOut.slice(1);
+      firstNameOut = firstNameOut1 + firstNameOut2;
+
+      var lastNameOut1 = lastNameOut.charAt(0).toUpperCase();
+      var lastNameOut2 = lastNameOut.slice(1);
+      lastNameOut = lastNameOut1 + lastNameOut2;
+
+      firstNameOut = everyWordCapitalized(firstNameOut);
+      lastNameOut = everyWordCapitalized(lastNameOut);
+
+      $(this).text(lastNameOut + " " + firstNameOut);
+    });
+    $(row).each(function () {
+      var tds = $(this).children('td').get().reverse();
+      $(this).append(tds);
+    });
+  });
+  loader.style.display = "none";
+  loader.style.cursor = "pointer";
+  var finish = (Date.now() / 1000 - start);
+  console.log('Go!');
+  console.log("Time : " + finish + " seconds");
+  return false;
+}
+
+$(function () {
+  console.log('ready!');
+  $('#csvConvert, #csvExport').attr('disabled', '');
+});
